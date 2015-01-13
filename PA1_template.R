@@ -6,7 +6,7 @@ library(plyr)
 
 
 # ##What is mean total number of steps taken per day?
-daily.steps <- aggregate(steps ~ date, data = activity, sum, na.action=na.pass, na.rm=TRUE)
+daily.steps <- aggregate(steps ~ date, data = activity, sum, na.rm=TRUE)
 
 ggplot(daily.steps, aes(steps)) + geom_histogram(colour = "navyblue", fill = "white", binwidth = 1000) + 
     ggtitle("Total Steps Taken by Day") 
